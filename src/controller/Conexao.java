@@ -8,8 +8,8 @@ public class Conexao {
     public static Connection conectar() {
         Connection conn = null;
         try {
-            Class.forName("org.sqlite.JDBC");
-            String url = "jdbc:sqlite:rentacar.db";
+            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+            String url = "jdbc:ucanaccess://rentacar.accdb";
             conn = DriverManager.getConnection(url);
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Erro de conexao: " + e.getMessage());

@@ -6,6 +6,8 @@ import servico.GerenciadorRentACar;
 
 public class Main {
     public static void main(String[] args) {
+    	controller.Conexao.conectar();
+    	System.out.println("Teste de BD concluído.");
         GerenciadorRentACar gestor = new GerenciadorRentACar();
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
